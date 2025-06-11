@@ -1,4 +1,3 @@
-
 import { ArrowRight, Code, Database, Globe, Github, Linkedin, Twitter, Mail, Phone, MapPin, ExternalLink, Calendar, User, Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -82,6 +81,34 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Top Contact Bar */}
+      <div className="bg-white border-b border-gray-200 py-3">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center space-x-6 text-sm text-gray-600">
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" />
+                <a href="mailto:jerry@jerryvoldo.dev" className="hover:text-blue-600">jerry@jerryvoldo.dev</a>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                <a href="tel:+6281234567890" className="hover:text-blue-600">+62 812-3456-7890</a>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                <Calendar className="mr-2 h-4 w-4" />
+                Konsultasi Gratis
+              </Button>
+              <Button size="sm" variant="outline">
+                <Mail className="mr-2 h-4 w-4" />
+                Hubungi Sekarang
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
