@@ -28,39 +28,13 @@ const Index = () => {
     {
       id: 1,
       title: "Aplikasi Manajemen Konsultasi Tatap Muka",
-      description: "Aplikasi ini digunakan dalam menerima permintaan konsultasi tatap muka oleh pelaku usaha dan sekaligus untuk mencatat hasil konsultasinya yang dapat diakses setiap saat. Didesain untuk tiga roles yaitu admin, konsultan dan klien. Setiap role dapat melakukan login dan mempunyai dashboard masing-masing",
+      description: "Aplikasi ini digunakan dalam menerima permintaan konsultasi tatap muka oleh pelaku usaha dan sekaligus untuk mencatat hasil konsultasinya yang dapat diakses setiap saat. Didesain untuk tiga roles yaitu admin, konsultan dan klien. Setiap role dapat melakukan login dan mempunyai dashboard masing-masing. Untuk demo, silahkan login per role dengan informasi berikut: admin@gmail.com / admin123 untuk role Admin ; konsultan@gmail.com / konsultan123 untuk role Konsultan ; klien@gmail.com / klien123 untuk role Klien",
       status: "Completed",
       tech: ["ReactJS", "Golang", "PostgreSQL"],
       image: "https://photos.app.goo.gl/RdCrXtng8L1rXQYz6",
-      completion: 100
+      completion: 100,
+      demo:"https://jerryvoldo.my.id/consultflownavigator/"
     },
-    {
-      id: 2,
-      title: "Learning Management System",
-      description: "Platform pembelajaran online dengan fitur video streaming, quiz interaktif, dan progress tracking.",
-      status: "In Progress", 
-      tech: ["ReactJS", "PHP", "CodeIgniter 4"],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      completion: 75
-    },
-    {
-      id: 3,
-      title: "Corporate Website",
-      description: "Website perusahaan dengan CMS custom dan optimasi SEO untuk meningkatkan visibility online.",
-      status: "Completed",
-      tech: ["HTML", "Tailwind CSS", "PocketBase"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      completion: 100
-    },
-    {
-      id: 4,
-      title: "Real Estate Platform",
-      description: "Platform properti dengan fitur pencarian advanced, virtual tour, dan sistem booking online.",
-      status: "Planning",
-      tech: ["ReactJS", "Golang", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      completion: 20
-    }
   ];
 
   const socialLinks = [
@@ -88,11 +62,7 @@ const Index = () => {
             <div className="flex items-center space-x-6 text-sm text-gray-600">
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                <a href="mailto:jerry@jerryvoldo.dev" className="hover:text-blue-600">jerry@jerryvoldo.dev</a>
-              </div>
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                <a href="tel:+6281234567890" className="hover:text-blue-600">+62 812-3456-7890</a>
+                <a href="mailto:jerry.voldo AT gmail.com" className="hover:text-blue-600">jerry.voldo AT gmail.com</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -136,7 +106,7 @@ const Index = () => {
                 <Briefcase className="mr-2 h-5 w-5" />
                 Lihat Portfolio
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
                 Hubungi Saya
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -236,6 +206,7 @@ const Index = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{project.demo}</p> 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech.map((tech, index) => (
                         <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">
