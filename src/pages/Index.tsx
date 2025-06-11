@@ -31,7 +31,7 @@ const Index = () => {
       description: "Aplikasi ini digunakan dalam menerima permintaan konsultasi tatap muka oleh pelaku usaha dan sekaligus untuk mencatat hasil konsultasinya yang dapat diakses setiap saat. Didesain untuk tiga roles yaitu admin, konsultan dan klien. Setiap role dapat melakukan login dan mempunyai dashboard masing-masing",
       status: "Completed",
       tech: ["ReactJS", "Golang", "PostgreSQL"],
-      image: "https://drive.google.com/file/d/1bg-fvqQPwvMJAOI8zZ28jechBt4b7sXI/view?usp=drive_link",
+      image: "https://drive.google.com/file/d/1bg-fvqQPwvMJAOI8zZ28jechBt4b7sXI/view?usp=sharing",
       completion: 100
     },
     {
