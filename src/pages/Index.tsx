@@ -1,5 +1,5 @@
 
-import { ArrowRight, Code, Database, Globe, Github, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Code, Database, Globe, Github, Linkedin, Twitter, Mail, Phone, MapPin, ExternalLink, Calendar, User, Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -25,36 +25,93 @@ const Index = () => {
     ],
   };
 
-  const socialLinks = [
-    { name: "GitHub", icon: Github, url: "#", color: "hover:text-gray-800" },
-    { name: "LinkedIn", icon: Linkedin, url: "#", color: "hover:text-blue-600" },
-    { name: "Twitter", icon: Twitter, url: "#", color: "hover:text-blue-400" },
-    { name: "Email", icon: Mail, url: "mailto:hello@example.com", color: "hover:text-red-500" },
+  const projects = [
+    {
+      id: 1,
+      title: "E-Commerce Platform",
+      description: "Full-stack e-commerce solution dengan payment gateway terintegrasi dan dashboard admin yang komprehensif.",
+      status: "Completed",
+      tech: ["ReactJS", "Golang", "PostgreSQL"],
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      completion: 100
+    },
+    {
+      id: 2,
+      title: "Learning Management System",
+      description: "Platform pembelajaran online dengan fitur video streaming, quiz interaktif, dan progress tracking.",
+      status: "In Progress", 
+      tech: ["ReactJS", "PHP", "CodeIgniter 4"],
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      completion: 75
+    },
+    {
+      id: 3,
+      title: "Corporate Website",
+      description: "Website perusahaan dengan CMS custom dan optimasi SEO untuk meningkatkan visibility online.",
+      status: "Completed",
+      tech: ["HTML", "Tailwind CSS", "PocketBase"],
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      completion: 100
+    },
+    {
+      id: 4,
+      title: "Real Estate Platform",
+      description: "Platform properti dengan fitur pencarian advanced, virtual tour, dan sistem booking online.",
+      status: "Planning",
+      tech: ["ReactJS", "Golang", "PostgreSQL"],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      completion: 20
+    }
   ];
+
+  const socialLinks = [
+    { name: "GitHub", icon: Github, url: "https://github.com/jerryvoldo", color: "hover:text-gray-800" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/jerryvoldo", color: "hover:text-blue-600" },
+    { name: "Twitter", icon: Twitter, url: "https://twitter.com/jerryvoldo", color: "hover:text-blue-400" },
+    { name: "Email", icon: Mail, url: "mailto:jerry@jerryvoldo.dev", color: "hover:text-red-500" },
+  ];
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case "Completed": return "bg-green-100 text-green-800";
+      case "In Progress": return "bg-blue-100 text-blue-800";
+      case "Planning": return "bg-yellow-100 text-yellow-800";
+      default: return "bg-gray-100 text-gray-800";
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-10"></div>
         <div className="relative container mx-auto px-6 py-24">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <User className="h-4 w-4" />
+                Available for Freelance Projects
+              </div>
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-              Web Developer
+              Jerry Voldo
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                Freelancer
+                Web Developer
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-fade-in">
-              Transformasi ide digital Anda menjadi kenyataan dengan solusi web yang inovatif dan berkualitas tinggi
+              Membangun solusi web inovatif dan berkualitas tinggi untuk bisnis digital Anda. 
+              Dari konsep hingga deployment, saya siap mewujudkan visi digital terbaik Anda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
+                <Briefcase className="mr-2 h-5 w-5" />
                 Lihat Portfolio
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
                 Hubungi Saya
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -65,33 +122,53 @@ const Index = () => {
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Tentang Saya</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Tentang Jerry</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="w-64 h-64 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
-                  WD
+              <div className="relative">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                    alt="Developer workspace"
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-sm">Currently Available</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               
               <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <h3 className="text-3xl font-semibold text-gray-900">
                   Passionate Full-Stack Developer
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Saya adalah freelancer pengembang web dengan pengalaman lebih dari 5 tahun dalam membangun aplikasi web yang scalable dan user-friendly. Spesialisasi saya mencakup development full-stack dengan fokus pada performa dan user experience yang optimal.
+                  Halo! Saya Jerry Voldo, seorang freelancer pengembang web dengan pengalaman lebih dari 5 tahun 
+                  dalam membangun aplikasi web yang scalable dan user-friendly. Saya berspesialisasi dalam 
+                  development full-stack dengan fokus pada performa optimal dan user experience yang luar biasa.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Dengan keahlian di berbagai teknologi modern, saya siap membantu mewujudkan visi digital Anda dari konsep hingga deployment. Setiap project saya tangani dengan dedikasi tinggi dan standar kualitas profesional.
+                  Dengan keahlian di berbagai teknologi modern, saya siap membantu mewujudkan visi digital Anda 
+                  dari konsep hingga deployment. Setiap project saya tangani dengan dedikasi tinggi dan standar 
+                  kualitas profesional internasional.
                 </p>
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">5+ Years Experience</span>
-                  <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">50+ Projects</span>
-                  <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">100% Client Satisfaction</span>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-4 bg-blue-50 rounded-lg">
+                    <div className="text-2xl font-bold text-blue-600">5+</div>
+                    <div className="text-sm text-gray-600">Years Experience</div>
+                  </div>
+                  <div className="text-center p-4 bg-purple-50 rounded-lg">
+                    <div className="text-2xl font-bold text-purple-600">50+</div>
+                    <div className="text-sm text-gray-600">Projects Completed</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,8 +176,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Projects Portfolio Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Portfolio Project</h2>
+              <p className="text-xl text-gray-600">Beberapa project yang telah dan sedang saya kerjakan</p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {projects.map((project) => (
+                <Card key={project.id} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-[1.02] overflow-hidden">
+                  <div className="relative">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(project.status)}`}>
+                        {project.status}
+                      </span>
+                    </div>
+                    <div className="absolute bottom-4 left-4">
+                      <div className="bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                        {project.completion}% Complete
+                      </div>
+                    </div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tech.map((tech, index) => (
+                        <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div 
+                          className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300"
+                          style={{ width: `${project.completion}%` }}
+                        ></div>
+                      </div>
+                      <Button size="sm" variant="ghost" className="ml-4 p-2">
+                        <ExternalLink className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -175,8 +311,9 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-10"></div>
+        <div className="relative container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Siap Mewujudkan Project Impian Anda?
@@ -185,15 +322,21 @@ const Index = () => {
               Mari berkolaborasi untuk menciptakan solusi web yang powerful dan scalable untuk bisnis Anda. 
               Dari konsep hingga launch, saya siap mendampingi perjalanan digital Anda.
             </p>
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-12 py-4">
-              Mulai Project Anda
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-12 py-4">
+                <Calendar className="mr-2 h-5 w-5" />
+                Jadwalkan Konsultasi
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-12 py-4">
+                Lihat Project Lainnya
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Social Media & Contact */}
+      {/* Contact & Social Media */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -224,7 +367,7 @@ const Index = () => {
               <div className="flex flex-col items-center">
                 <Mail className="h-8 w-8 text-blue-400 mb-3" />
                 <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-gray-300">hello@webdev.com</p>
+                <p className="text-gray-300">jerry@jerryvoldo.dev</p>
               </div>
               <div className="flex flex-col items-center">
                 <MapPin className="h-8 w-8 text-blue-400 mb-3" />
@@ -242,7 +385,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                Web Developer Freelancer
+                Jerry Voldo
               </h3>
               <p className="text-gray-300 mb-4 leading-relaxed">
                 Passionate freelancer yang berdedikasi untuk menciptakan pengalaman web yang luar biasa. 
@@ -284,7 +427,7 @@ const Index = () => {
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 Web Developer Freelancer. All rights reserved. Built with ❤️ using React & Tailwind CSS.
+              © 2024 Jerry Voldo. All rights reserved. Built with ❤️ using React & Tailwind CSS.
             </p>
           </div>
         </div>
