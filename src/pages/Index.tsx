@@ -206,7 +206,7 @@ const Index = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-                    <p className="text-gray-600 mb-4 leading-relaxed">Demo : <a href="{project.demo}">{project.demo}</a></p> 
+                    <p className="text-gray-600 mb-4 leading-relaxed"><a href="{project.demo}">Demo</a></p> 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech.map((tech, index) => (
                         <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">
