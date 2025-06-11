@@ -27,11 +27,11 @@ const Index = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution dengan payment gateway terintegrasi dan dashboard admin yang komprehensif.",
+      title: "Aplikasi Manajemen Konsultasi Tatap Muka",
+      description: "Aplikasi ini digunakan dalam menerima permintaan konsultasi tatap muka oleh pelaku usaha dan sekaligus untuk mencatat hasil konsultasinya yang dapat diakses setiap saat. Didesain untuk tiga roles yaitu admin, konsultan dan klien. Setiap role dapat melakukan login dan mempunyai dashboard masing-masing",
       status: "Completed",
       tech: ["ReactJS", "Golang", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://drive.google.com/file/d/1bg-fvqQPwvMJAOI8zZ28jechBt4b7sXI/view?usp=drive_link",
       completion: 100
     },
     {
@@ -178,23 +178,23 @@ const Index = () => {
                   Passionate Full-Stack Developer
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Halo! Saya Jerry Voldo, seorang freelancer pengembang web dengan pengalaman lebih dari 5 tahun 
+                  Halo! Saya Jerry Voldo, seorang freelancer pengembang web dengan pengalaman 2 tahun 
                   dalam membangun aplikasi web yang scalable dan user-friendly. Saya berspesialisasi dalam 
                   development full-stack dengan fokus pada performa optimal dan user experience yang luar biasa.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Dengan keahlian di berbagai teknologi modern, saya siap membantu mewujudkan visi digital Anda 
                   dari konsep hingga deployment. Setiap project saya tangani dengan dedikasi tinggi dan standar 
-                  kualitas profesional internasional.
+                  kualitas profesional.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">5+</div>
-                    <div className="text-sm text-gray-600">Years Experience</div>
+                    <div className="text-2xl font-bold text-blue-600">2</div>
+                    <div className="text-sm text-gray-600">Tahun Pengalaman</div>
                   </div>
                   <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">50+</div>
-                    <div className="text-sm text-gray-600">Projects Completed</div>
+                    <div className="text-2xl font-bold text-purple-600">4</div>
+                    <div className="text-sm text-gray-600">Proyek Selesai</div>
                   </div>
                 </div>
               </div>
