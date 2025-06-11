@@ -40,8 +40,8 @@ const Index = () => {
   const socialLinks = [
     { name: "GitHub", icon: Github, url: "https://github.com/jerryvoldo", color: "hover:text-gray-800" },
     { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/jerryvoldo", color: "hover:text-blue-600" },
-    { name: "Twitter", icon: Twitter, url: "https://twitter.com/jerryvoldo", color: "hover:text-blue-400" },
-    { name: "Email", icon: Mail, url: "mailto:jerry@jerryvoldo.dev", color: "hover:text-red-500" },
+    { name: "Twitter", icon: Twitter, url: "https://twitter.com/jerrymanru", color: "hover:text-blue-400" },
+    { name: "Email", icon: Mail, url: "mailto:jerry.voldo@gmail.com", color: "hover:text-red-500" },
   ];
 
   const getStatusColor = (status: string) => {
@@ -320,16 +320,6 @@ const Index = () => {
               Mari berkolaborasi untuk menciptakan solusi web yang powerful dan scalable untuk bisnis Anda. 
               Dari konsep hingga launch, saya siap mendampingi perjalanan digital Anda.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-12 py-4">
-                <Calendar className="mr-2 h-5 w-5" />
-                Jadwalkan Konsultasi
-              </Button>
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-12 py-4">
-                Lihat Project Lainnya
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -365,7 +355,7 @@ const Index = () => {
               <div className="flex flex-col items-center">
                 <Mail className="h-8 w-8 text-blue-400 mb-3" />
                 <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-gray-300">jerry@jerryvoldo.dev</p>
+                <p className="text-gray-300">jerry.voldo@gmail.com</p>
               </div>
               <div className="flex flex-col items-center">
                 <MapPin className="h-8 w-8 text-blue-400 mb-3" />
@@ -407,8 +397,6 @@ const Index = () => {
               <ul className="space-y-2 text-gray-300">
                 <li><a href="#" className="hover:text-white transition-colors">Web Development</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">API Development</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Database Design</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Consultation</a></li>
               </ul>
             </div>
             
@@ -425,7 +413,7 @@ const Index = () => {
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 Jerry Voldo. All rights reserved. Built with ❤️ using React & Tailwind CSS.
+              © 2025 Jerry Voldo. All rights reserved. Built with ❤️ using React & Tailwind CSS.
             </p>
           </div>
         </div>
