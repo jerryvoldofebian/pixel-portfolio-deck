@@ -31,7 +31,7 @@ const Index = () => {
       description: "Aplikasi ini digunakan dalam menerima permintaan konsultasi tatap muka oleh pelaku usaha dan sekaligus untuk mencatat hasil konsultasinya yang dapat diakses setiap saat. Didesain untuk tiga roles yaitu admin, konsultan dan klien. Setiap role dapat melakukan login dan mempunyai dashboard masing-masing. Untuk demo, silahkan login per role dengan informasi berikut: admin@gmail.com / admin123 untuk role Admin ; konsultan@gmail.com / konsultan123 untuk role Konsultan ; klien@gmail.com / klien123 untuk role Klien",
       status: "Completed",
       tech: ["ReactJS", "Golang", "PostgreSQL"],
-      image: "https://photos.app.goo.gl/oCSE3UYp2J4eqLddA",
+      image: "https://drive.google.com/uc?export=view&id=1KJ13r20tqkwR1FEBMZxWoUlpgwUBZzCa",
       completion: 100,
       demo:"https://jerryvoldo.my.id/consultflownavigator/"
     },
