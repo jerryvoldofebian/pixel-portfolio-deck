@@ -354,7 +354,7 @@ const Index = () => {
                 <Calendar className="mr-2 h-5 w-5" />
                 Jadwalkan Konsultasi
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-12 py-4">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-12 py-4">
                 Lihat Project Lainnya
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
