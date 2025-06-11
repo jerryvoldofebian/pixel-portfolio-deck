@@ -31,7 +31,7 @@ const Index = () => {
       description: "Aplikasi ini digunakan dalam menerima permintaan konsultasi tatap muka oleh pelaku usaha dan sekaligus untuk mencatat hasil konsultasinya yang dapat diakses setiap saat. Didesain untuk tiga roles yaitu admin, konsultan dan klien. Setiap role dapat melakukan login dan mempunyai dashboard masing-masing. Untuk demo, silahkan login per role dengan informasi berikut: admin@gmail.com / admin123 untuk role Admin ; konsultan@gmail.com / konsultan123 untuk role Konsultan ; klien@gmail.com / klien123 untuk role Klien",
       status: "Completed",
       tech: ["ReactJS", "Golang", "PostgreSQL"],
-      image: "https://photos.app.goo.gl/RdCrXtng8L1rXQYz6",
+      image: "https://photos.app.goo.gl/oCSE3UYp2J4eqLddA",
       completion: 100,
       demo:"https://jerryvoldo.my.id/consultflownavigator/"
     },
@@ -199,14 +199,14 @@ const Index = () => {
                     </div>
                     <div className="absolute bottom-4 left-4">
                       <div className="bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
-                        {project.completion}% Complete
+                        {project.completion}% Selesai
                       </div>
                     </div>
                   </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{project.demo}</p> 
+                    <p className="text-gray-600 mb-4 leading-relaxed">Demo : <a href="{project.demo}">{project.demo}</a></p> 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech.map((tech, index) => (
                         <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">
